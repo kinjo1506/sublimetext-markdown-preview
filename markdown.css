@@ -21,12 +21,11 @@ body .markdown-body
 }
 
 .markdown-body {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #333333;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-family: "Migu 1C";
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
@@ -84,14 +83,6 @@ body .markdown-body
 
 .markdown-body pre {
   overflow: auto;
-}
-
-.markdown-body code,
-.markdown-body kbd,
-.markdown-body pre,
-.markdown-body samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
 }
 
 .markdown-body input {

@@ -387,6 +387,17 @@ class Compiler(object):
             return True
         return False
 
+    def get_font_css(self):
+        fonts = ''
+        css_names = [
+            "fonts/migu-1c-regular.css",
+            ]
+        for css_name in css_names:
+            fonts = u"%s%s" % (fonts, load_resource(css_name))
+
+        return u"<style>%s</style>" % fonts
+
+
     def get_default_css(self):
         ''' locate the correct CSS with the 'css' setting '''
         css_name = self.settings.get('css', 'default')
@@ -420,7 +431,7 @@ class Compiler(object):
 
     def get_stylesheet(self):
         ''' return the correct CSS file based on parser and settings '''
-        return self.get_default_css() + self.get_override_css()
+        return self.get_font_css() + self.get_default_css() + self.get_override_css()
 
     def get_javascript(self):
         js_files = self.settings.get('js')
