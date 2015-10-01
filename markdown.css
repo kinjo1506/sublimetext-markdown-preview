@@ -1,7 +1,7 @@
 body {
-  width: 45em;
-  border: 1px solid #ddd;
-  outline: 1300px solid #fff;
+  width: 60em;
+  border: none;
+  outline: none;
   margin: 16px auto;
 }
 
@@ -429,6 +429,15 @@ body .markdown-body
   margin: 16px 0;
   background-color: #e7e7e7;
   border: 0 none;
+}
+
+.markdown-body hr.page-break {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dashed #ddd;
 }
 
 .markdown-body ul,
@@ -927,37 +936,6 @@ body .markdown-body
 }
 
 @media print {
-  .markdown-body * {
-    background: transparent !important;
-    color: black !important;
-    filter:none !important;
-    -ms-filter: none !important;
-  }
-
-  .markdown-body {
-    font-size:12pt;
-    max-width:100%;
-    outline:none;
-    border: 0;
-  }
-
-  .markdown-body a,
-  .markdown-body a:visited {
-    text-decoration: underline;
-  }
-
-  .markdown-body .headeranchor-link {
-    display: none;
-  }
-
-  .markdown-body a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  .markdown-body abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
   .markdown-body .ir a:after,
   .markdown-body a[href^="javascript:"]:after,
   .markdown-body a[href^="#"]:after {
@@ -972,8 +950,6 @@ body .markdown-body
 
   .markdown-body pre,
   .markdown-body blockquote {
-    border: 1px solid #999;
-    padding-right: 1em;
     page-break-inside: avoid;
   }
 
@@ -1012,5 +988,10 @@ body .markdown-body
   .markdown-body h2,
   .markdown-body h3 {
     page-break-after: avoid;
+  }
+
+  .markdown-body hr.page-break {
+    height: 0;
+    page-break-after: always;
   }
 }

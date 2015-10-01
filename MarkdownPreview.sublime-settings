@@ -111,7 +111,7 @@
         via the quick panel for which one to use.  If there is only one, it
         will automatically run that parser.
     */
-    "enabled_parsers": ["markdown", "github"],
+    "enabled_parsers": ["markdown" ],
 
     /*
         Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
@@ -143,7 +143,7 @@
         true - Any file with matching a .markdown_filetype extension with .css will be loaded as an override
         false - Matching files ignored
     */
-    "allow_css_overrides": true,
+    "allow_css_overrides": false,
 
     /*
         Specify a HTML template file to render your markdown within.

@@ -117,7 +117,7 @@ def load_resource(name):
 
     try:
         if is_ST3():
-            return sublime.load_resource('Packages/Markdown Preview/{0}'.format(name))
+            return sublime.load_resource('Packages/MarkdownPreviewForAirTrack/{0}'.format(name))
         else:
             filename = os.path.join(sublime.packages_path(), INSTALLED_DIRECTORY, name)
             return load_utf8(filename)
